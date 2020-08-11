@@ -14,14 +14,14 @@ let selectedWord = words[Math.floor(Math.random() * words.length)];
 let playable = true;
 
 const correctLetters=[];
-const WrongLetters=[];
+const WrongLetters=[]
 
 //show hidden
 function displayWord(){
     wordEl.innerHTML=`
     ${selectedWord.split('').map(letter=>{
         return `<span class="letter"> 
-            ${correctLetters.includes(letter)?letter: ""}
+            ${correctLetters.includes(letter)?letter:""}
         </span>`
     }).join('')}
     `;
